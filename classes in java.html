@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classer in JavaScript</title>
+</head>
+<body>
+    <p id="Max0"></p>
+    <p id="Max1"></p>
+    <script>
+        class student{
+            constructor(name){
+                this.name=name;
+            }
+            static hellow(){
+                return "Hellow";
+            }
+            present(){
+                return "My name in"+this.studentName;
+            }
+        }
+        class Grade extends student{
+            constructor(name,Grade){
+                super(name);
+                this.studentGrade=Grade;
+            }
+            show(){
+                return this.present()+" , From"+this.studentGrade;
+            }
+        }
+        let mystudent= new Grade("Mohammad","Grade 9");
+        document.getElementById("Max0").innerHTML= mystudent.show();
+        document.getElementById("Max1").innerHTML=Student.hellow();
+
+    </script>
+</body>
+</html>
